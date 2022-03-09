@@ -1,0 +1,40 @@
+POST http://127.0.0.1:4000/api/wilders
+Content-Type: application/json
+
+{
+    "name": "Tom",
+    "city": "Villeurbanne",
+    "skills": []
+}
+
+###
+
+GET http://127.0.0.1:4000/api/wilders
+
+###
+GET http://127.0.0.1:4000/api/wilders/622738ffbc24905eedfb5aa0
+
+### partial update
+PATCH  http://127.0.0.1:4000/api/wilders/62288472ecafbf4fe3556c2a
+Content-Type: application/json
+
+{
+    "city": "Lyon"
+}
+
+### full update
+PUT  http://127.0.0.1:4000/api/wilders/62288472ecafbf4fe3556c2a
+Content-Type: application/json
+
+{
+    "name": "Tom2",
+    "city": "Villeurbanne"
+}
+
+###
+
+DELETE http://127.0.0.1:4000/api/wilders/622738ffbc24905eedfb5aa0
+
+### 404 error 
+
+GET http://127.0.0.1:4000/api/projects
